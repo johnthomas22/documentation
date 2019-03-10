@@ -136,6 +136,14 @@ You will be prompted for a passphrase during key generation: this is an extra le
 
 The public key now needs to be moved on to the server. This can be done by email, or cut and paste, or file copying. Once on the server it needs to be added to the SSH systems authorised keys. It should be emphasised that the `id_rsa` file is the private key and SHOULD NOT LEAVE THE CLIENT, whilst the public key file is `id_rsa.pub`.
 
+(A simpler way to do the following is to use ssh-copy-id. 
+
+```bash
+ssh-copy-id edward@raspberrypi
+```
+
+You'll be asked for your password, then reminded to check you can login without one after the files are copied into place.)
+
 Add the new public key to the authorisation file as follows:
 
 ```vash
